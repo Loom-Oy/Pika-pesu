@@ -1,0 +1,83 @@
+<?php $order = $block->getOrder() ?>
+<?php if ($order->getIsVirtual()) { return ''; } ?>
+<?php $agent = $block->getAgent(); ?>
+<?php if ( strpos($order->getShippingMethod(), 'matkahuolto') === false ) { return ''; } ?>
+
+<section class="admin__page-section order-view-matkahuolto-agent">
+  <div class="admin__page-section-content">
+    <div class="admin__page-section-item">
+      <div class="admin__page-section-item-title">
+        <span class="title"><?= __('Pickup Location') ?></span>
+      </div>
+      <div class="admin__page-section-item-content">
+        <?php if ($agent) { ?>
+          <?= $agent->getName(); ?> (<?= $agent->getAgentId(); ?>)<br>
+          <?= $agent->getStreetAddress(); ?><br>
+          <?= $agent->getPostcode(); ?> <?= $agent->getCity(); ?>
+        <?php } else { ?>
+          <?= __( 'No pickup location selected.' ); ?>
+        <?php } ?>
+        <a href="#" class="open-matkahuolto-agent-modal">
+          <br><?php echo __('Change'); ?>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script type="text/javascript">
+  require([
+    'jquery',
+    'Magento_Ui/js/modal/modal'
+  ], function($, modal) {
+    $('#matkahuolto-admin-agent-search').modal({
+      title: 'Change Pickup Location',
+      buttons: [
+        {
+          text: 'Cancel',
+          class: 'action-secondary',
+          click: function() {
+            this.closeModal();
+          }
+        },
+        {
+          text: 'Save',
+          class: 'action-primary',
+          click: function() {
+            $('#matkahuolto-admin-agent-search form').submit();
+          }
+        }
+      ]
+    });
+
+    /**
+     * Open the modal when clicking the button
+     */
+    $(document).on('click', '.open-matkahuolto-agent-modal', function(e) {
+      e.preventDefault();
+
+      $('#matkahuolto-admin-agent-search').modal('openModal');
+    });
+  });
+</script>
+
+<div id="matkahuolto-admin-agent-search" data-bind="scope:'matkahuolto-admin-agent-search'">
+  <!-- ko template: getTemplate() --><!-- /ko -->
+  <script type="text/x-magento-init">
+  {
+    "#matkahuolto-admin-agent-search": {
+      "Magento_Ui/js/core/app": {
+        "components": {
+          "matkahuolto-admin-agent-search": {
+            "component": "Markup_Matkahuolto/js/view/admin-agent-search",
+            "shippingMethod": "<?= $order->getShippingMethod(); ?>",
+            "formAction": "<?= $block->getFormAction(); ?>",
+            "formKey": "<?= $block->getFormKey(); ?>",
+            "orderId": "<?= $block->getOrder()->getId(); ?>"
+          }
+        }
+      }
+    }
+  }
+  </script>
+</div>

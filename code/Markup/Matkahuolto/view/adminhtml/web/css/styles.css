@@ -1,0 +1,26 @@
+.order-view-matkahuolto-agent {
+  margin-top: -3.5rem;
+}
+
+.matkahuolto-agent-modal span.error {
+  color: #626262;
+  font-size: 0.9em;
+}
+
+.matkahuolto-agent-modal select {
+  margin-top: 1em;
+}
+
+.matkahuolto-agent-modal .loading {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  background: url("../images/ajax-loader.gif") no-repeat top left;
+}
+
+/**
+ * Hide VAK enabled option as it will be set programmatically from custom variable
+ */
+fieldset#carriers_matkahuolto tr#row_carriers_matkahuolto_vak_enabled {
+  display: none;
+}

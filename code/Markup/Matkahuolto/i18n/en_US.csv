@@ -1,0 +1,60 @@
+"Maximum Weight (kg)","Maximum Weight (kg)"
+Cost,Cost
+Bussiennakko,Bussiennakko
+"Security validation of XML document has been failed.","Security validation of XML document has been failed."
+"No packages for request","No packages for request"
+"Version 1","Version 1"
+"Version 2","Version 2"
+"Pickup Location","Pickup Location"
+"Pickup location","Pickup location"
+Postcode,Postcode
+"Enter postcode in format XXXXX (e.g. 00100)","Enter postcode in format XXXXX (e.g. 00100)"
+"Show more","Show more"
+"Loading pickup locations...","Loading pickup locations..."
+"Place Order","Place Order"
+"Field ","Field "
+" is required."," is required."
+Matkahuolto,Matkahuolto
+"Enabled for Checkout","Enabled for Checkout"
+"User ID","User ID"
+Password,Password
+Mode,Mode
+"Office Search API","Office Search API"
+"Ship to Applicable Countries","Ship to Applicable Countries"
+"Ship to Specific Countries","Ship to Specific Countries"
+"Verkkopaketti Title","Verkkopaketti Title"
+"Verkkopaketti Enabled for Checkout","Verkkopaketti Enabled for Checkout"
+"Verkkopaketti Pricing","Verkkopaketti Pricing"
+"Verkkopaketti Free Shipping Amount Threshold","Verkkopaketti Free Shipping Amount Threshold"
+"Bussipaketti Title","Bussipaketti Title"
+"Bussipaketti Enabled for Checkout","Bussipaketti Enabled for Checkout"
+"Bussipaketti Pricing","Bussipaketti Pricing"
+"Bussipaketti Free Shipping Amount Threshold","Bussipaketti Free Shipping Amount Threshold"
+"Jakopaketti Title","Jakopaketti Title"
+"Jakopaketti Enabled for Checkout","Jakopaketti Enabled for Checkout"
+"Jakopaketti Pricing","Jakopaketti Pricing"
+"Jakopaketti Free Shipping Amount Threshold","Jakopaketti Free Shipping Amount Threshold"
+"Kotijakelu Title","Kotijakelu Title"
+"Kotijakelu Enabled for Checkout","Kotijakelu Enabled for Checkout"
+"Kotijakelu Pricing","Kotijakelu Pricing"
+"Kotijakelu Free Shipping Amount Threshold","Kotijakelu Free Shipping Amount Threshold"
+"Noutopaketti Title","Noutopaketti Title"
+"Agent ID","Agent ID"
+"Noutopaketti Enabled for Checkout","Noutopaketti Enabled for Checkout"
+"Noutopaketti Pricing","Noutopaketti Pricing"
+"Noutopaketti Free Shipping Amount Threshold","Noutopaketti Free Shipping Amount Threshold"
+"Displayed Error Message","Displayed Error Message"
+"Show Method if Not Applicable","Show Method if Not Applicable"
+"Sort Order","Sort Order"
+"Bussiennakko Payment","Bussiennakko Payment"
+Enabled,Enabled
+Title,Title
+"New Order Status","New Order Status"
+"Payment from Applicable Countries","Payment from Applicable Countries"
+"Payment from Specific Countries","Payment from Specific Countries"
+Instructions,Instructions
+"Minimum Order Total","Minimum Order Total"
+"Maximum Order Total","Maximum Order Total"
+Fee,Fee
+IBAN,IBAN
+BIC-code,BIC-code

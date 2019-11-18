@@ -1,0 +1,53 @@
+/**
+ * Field for postcode search
+ */
+
+.matkahuolto-agent-search-postcode {
+  margin-top: 20px;
+  margin: 20px 0 10px;
+}
+
+.matkahuolto-agent-search-postcode label {
+  display: inline-block;
+  margin-right: 5px;
+}
+
+.matkahuolto-agent-search-postcode input[type="text"] {
+  display: inline-block;
+  width: 120px;
+  margin-right: 5px;
+}
+
+.matkahuolto-agent-search-postcode span.error {
+  display: inline-block;
+  color: #626262;
+  font-size: 0.9em;
+}
+
+/**
+ * Agents table
+ */
+
+.table-matkahuolto-agent-search tbody td {
+  padding-top: 10px !important;
+  padding-bottom: 10px !important;
+}
+
+.table-matkahuolto-agent-search td input[type="radio"] {
+  margin: 0 5px 0 0;
+  height: 40px;
+}
+
+.table-matkahuolto-agent-search td label.matkahuolto-agent {
+  white-space: nowrap;
+}
+
+.table-matkahuolto-agent-search .matkahuolto-agent-info {
+  display: inline-block;
+  vertical-align: top;
+}
+
+.table-matkahuolto-agent-search .matkahuolto-agent-address {
+  font-size: 0.9em;
+  color: #626262;
+}

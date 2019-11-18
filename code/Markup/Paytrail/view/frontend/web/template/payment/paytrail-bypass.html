@@ -1,0 +1,64 @@
+<!-- ko foreach:  { data: getMethodGroups(), as: 'methodGroup' } -->
+  <div class="payment-method" data-bind="css: {'_active': ($parent.getCode() == $parent.isChecked() && methodGroup.id == $parent.selectedMethodGroup())}">
+      <div class="payment-method-title field choice">
+          <input type="radio"
+                 name="payment[method]"
+                 class="radio"
+                 data-bind="attr: {'id': methodGroup.id}, value: methodGroup.id, click: $parent.selectPaymentMethod, checked: ($parent.getCode() == $parent.isChecked() && $parent.selectedMethodGroup)"/>
+          <label data-bind="attr: {'for': methodGroup.id}" class="label"><span data-bind="text: methodGroup.title"></span></label>
+      </div>
+
+      <div class="payment-method-content">
+          <!-- ko foreach: $parents[0].getRegion('messages') -->
+            <!-- ko template: getTemplate() --><!-- /ko -->
+          <!--/ko-->
+          <p data-bind="html: $parent.getInstructions()"></p>
+          <div class="payment-method-billing-address">
+              <!-- ko foreach: $parents[1].getRegion($parent.getBillingAddressFormName()) -->
+              <!-- ko template: getTemplate() --><!-- /ko -->
+              <!--/ko-->
+          </div>
+          <div class="checkout-agreements-block">
+              <!-- ko foreach: $parents[1].getRegion('before-place-order') -->
+                  <!-- ko template: getTemplate() --><!-- /ko -->
+              <!--/ko-->
+          </div>
+          <div class="paytrail-payment-methods">
+            <div>
+              <!-- ko foreach: methodGroup['methods'] -->
+                <div class="paytrail-payment-method" data-bind="
+                  attr: {id: 'paytrail-payment-method-' + id},
+                  css: { active: $parents[1].selectedPaymentMethodId() == id },
+                  click: $parents[1].setPaymentMethodId
+                  "
+                >
+                  <div class="paytrail-payment-method-logo"></div>
+                  <div class="paytrail-payment-method-title" data-bind="text: title"></div>
+                  <div>
+                    <input type="radio" data-bind="attr: {value: id}, checked: $parents[1].selectedPaymentMethodId" />
+                  </div>
+                </div>
+              <!--/ko-->
+            </div>
+          </div>
+          <div class="actions-toolbar">
+              <div class="primary">
+                  <button class="action primary checkout"
+                          type="submit"
+                          data-bind="
+                          click: $parent.placeOrder,
+                          attr: {title: $t('Place Order')},
+                          enable: (methodGroup.id == $parent.selectedMethodGroup()),
+                          css: {disabled: !$parent.isPlaceOrderActionAllowed()}
+                          "
+                          disabled>
+                      <span data-bind="i18n: 'Place Order'"></span>
+                  </button>
+              </div>
+          </div>
+          <!-- ko if: $parent.getPaymentPageBypass() -->
+            <div id="paytrail-form-wrapper" style="display:none;"></div>
+          <!-- /ko -->
+      </div>
+  </div>
+<!-- /ko -->

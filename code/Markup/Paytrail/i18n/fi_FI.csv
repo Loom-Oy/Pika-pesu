@@ -1,0 +1,62 @@
+Order number is empty,Tilausnumero puuttuu.
+No order for processing found,Tilausta ei löytynyt.
+Order canceled. Failed to complete the payment.,Maksua ei voitu suorittaa. Ole hyvä ja yritä uudelleen.
+Failed to complete the payment. Please try again or contact the customer service.,Maksua ei voitu suorittaa. Ole hyvä ja yritä uudelleen. (2)
+Payment failed,Maksu epäonnistui.
+Payment has been completed,Maksu hyväksytty.
+Order canceled. Failed to redirect to Paytrail.,Maksua ei voitu suorittaa. Ole hyvä ja yritä uudelleen. (3)
+Finnish,suomi
+English,englanti
+Swedish,ruotsi
+Nordea,Nordea
+Osuuspankki,Osuuspankki
+Danske Bank,Danske Bank
+Ålandsbanken,Ålandsbanken
+Handelsbanken,Handelsbanken
+S-Pankki,S-Pankki
+Aktia,Aktia
+POP Pankki,POP Pankki
+Säästöpankki,Säästöpankki
+Oma Säästöpankki,Oma Säästöpankki
+"Klarna, Invoice",Klarna Lasku
+"Klarna, Installment",Klarna Osamaksu
+Jousto,Jousto
+Collector Bank,Collector
+Visa,Visa
+MasterCard,MasterCard
+Diners Club,Diners Club
+JCB,JCB
+Visa (Nets),Visa (Nets)
+MasterCard (Nets),MasterCard (Nets)
+Diners Club (Nets),Diners Club (Nets)
+American Express (Nets),American Express (Nets)
+MobilePay,MobilePay
+Paytrail account,Paytrail-tili
+Paypal,Paypal
+The customer was redirected to Paytrail.,Asiakas ohjattiin maksamaan Paytrailiin.
+Cannot get payment URL from Paytrail,Maksun osoitetta ei voitu hakea.
+Unexpected error (totals do not match).,Odottamaton virhe (summat eivät täsmää).
+Online Banking,Maksu verkkopankissa
+Credit / Debit Card,Maksu luotto- tai pankkikortilla
+Invoice / Part Payment,Lasku tai osamaksu
+Paytrail Account,Paytrail-tili
+PayPal,PayPal
+Place Order,Vahvista tilaus
+An error occurred on the server. Please try to place the order again.,Tapahtui palvelinvirhe. Ole hyvä ja yritä uudelleen.
+Paytrail,Paytrail
+Enabled,Käytössä
+Title,Nimi
+Merchant ID,Kauppiastunnus
+Merchant Secret,Salainen avain
+Language,Kieli
+Use Payment Page Bypass,Käytä maksusivun ohitusta
+Payment Methods,Maksutavat
+New Order Status,Uuden tilauksen tila
+Payment from Applicable Countries,Sallitut maat
+Payment from Specific Countries,Maksu tietyistä maista
+Instructions,Ohjeet
+Minimum Order Total,Minimitilaus
+Maximum Order Total,Maksimitilaus
+Sort Order,Järjestys
+Discount,Alennus
+Shipping,Toimitus

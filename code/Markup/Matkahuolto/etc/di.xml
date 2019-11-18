@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+  <preference for="Markup\Matkahuolto\Api\AgentsInterface" type="Markup\Matkahuolto\Model\Agents" />
+  <preference for="Markup\Matkahuolto\Api\Data\MatkahuoltoAgentInterface" type="Markup\Matkahuolto\Model\Order\MatkahuoltoAgent" />
+
+  <type name="Magento\Checkout\Model\ShippingInformationManagement">
+    <plugin name="markup_matkahuolto_save_agent_id" type="Markup\Matkahuolto\Plugin\Checkout\Model\ShippingInformationManagement" sortOrder="1"/>
+  </type>
+
+  <type name="Magento\Quote\Model\Quote\TotalsCollector">
+    <plugin name="MarkupMatkahuoltoBussiennakkoTotalsCollectorReset" type="Markup\Matkahuolto\Plugin\Model\Quote\TotalsCollector" />
+  </type>
+
+  <type name="Magento\Sales\Api\OrderRepositoryInterface">
+    <plugin name="get_matkahuolto_agent" type="Markup\Matkahuolto\Plugin\Model\Order\OrderGet"/>
+  </type>
+</config>

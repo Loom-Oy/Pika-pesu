@@ -1,0 +1,44 @@
+<div class="matkahuolto-agent-modal">
+  <form data-bind="attr: {action: formAction}" method="POST">
+    <div>
+      <label data-bind="i18n: 'Postcode'"></label>
+      <input type="text" data-bind="value: searchPostcode, valueUpdate: 'keyup'" />
+      <!-- ko ifnot: validSearchPostcode -->
+        <span class="error" data-bind="i18n: 'Enter postcode in format XXXXX (e.g. 00100)'"></span>
+      <!-- /ko -->
+      <!-- ko ifnot: agentsLoading() -->
+        <!-- ko if: (agents().length == 0 && validSearchPostcode) -->
+          <span class="error" data-bind="i18n: 'No agents found. Please check the postcode.'"></span>
+        <!-- /ko -->
+      <!-- /ko -->
+      <!-- ko if: agentsLoading() -->
+        <span class="loading"></span>
+      <!-- /ko -->
+    </div>
+
+    <!-- ko ifnot: agentsLoading() -->
+      <!-- ko if: agents().length > 0 -->
+        <div>
+          <select data-bind="options: agents,
+            optionsText: function(agent) {
+              return agent.name + ' ' + agent.street_address + ', ' + agent.postal_code + ' ' + agent.city;
+            },
+            value: selectedAgent"
+          >
+          </select>
+        </div>
+      <!-- /ko -->
+    <!-- /ko -->
+
+    <!-- ko if: selectedAgent() != null -->
+      <input type="hidden" name="matkahuolto_agent[id]" data-bind="attr: {value: selectedAgent().id}" />
+      <input type="hidden" name="matkahuolto_agent[name]" data-bind="attr: {value: selectedAgent().name}" />
+      <input type="hidden" name="matkahuolto_agent[street_address]" data-bind="attr: {value: selectedAgent().street_address}" />
+      <input type="hidden" name="matkahuolto_agent[city]" data-bind="attr: {value: selectedAgent().city}" />
+      <input type="hidden" name="matkahuolto_agent[postal_code]" data-bind="attr: {value: selectedAgent().postal_code}" />
+    <!-- /ko -->
+
+    <input name="order_id" type="hidden" data-bind="attr: {value: orderId}" />
+    <input name="form_key" type="hidden" data-bind="attr: {value: formKey}" />
+  </form>
+</div>

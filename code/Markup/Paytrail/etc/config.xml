@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Store:etc/config.xsd">
+  <default>
+    <payment>
+      <paytrail>
+        <title>Paytrail</title>
+        <model>Markup\Paytrail\Model\Paytrail</model>
+        <order_status>processing</order_status>
+        <payment_action>authorize_capture</payment_action>
+        <locale>fi_FI</locale>
+        <active>0</active>
+        <payment_page_bypass>0</payment_page_bypass>
+        <merchant_id></merchant_id>
+        <merchant_secret></merchant_secret>
+        <allowspecific>0</allowspecific>
+        <group>paytrail_payment_method</group>
+      </paytrail>
+    </payment>
+  </default>
+</config>

@@ -1,0 +1,62 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Store:etc/config.xsd">
+    <default>
+        <carriers>
+            <!--[Carrier's system identifier]-->
+            <matkahuolto>
+                <title>Matkahuolto</title>
+                <!--[Carrier's activate/deactivate flag default value]-->
+                <active>0</active>
+                <office_search_api>v2</office_search_api>
+                <!--[Specific countries]-->
+                <sallowspecific>0</sallowspecific>
+                <!--[Carrier's default titles]-->
+                <title_80>Lähellä-paketti</title_80>
+                <title_10>Bussipaketti</title_10>
+                <title_30>Jakopaketti</title_30>
+                <title_34>Kotijakelu</title_34>
+                <title_local>Noutopaketti</title_local>
+                <title_vak>Vaarallisten aineiden kuljetus</title_vak>
+                <!--[Carrier's activate/deactivate flag default values]-->
+                <active_80>0</active_80>
+                <active_10>0</active_10>
+                <active_30>0</active_30>
+                <active_34>0</active_34>
+                <active_local>0</active_local>
+                <active_vak>0</active_vak>
+                <!--[Free shipping thresholds]-->
+                <free_shipping_subtotal_80></free_shipping_subtotal_80>
+                <free_shipping_subtotal_10></free_shipping_subtotal_10>
+                <free_shipping_subtotal_30></free_shipping_subtotal_30>
+                <free_shipping_subtotal_34></free_shipping_subtotal_34>
+                <free_shipping_subtotal_local></free_shipping_subtotal_local>
+                <free_shipping_subtotal_vak></free_shipping_subtotal_vak>
+                <!--[Agent ID for local pickup]-->
+                <local_agentid></local_agentid>
+                <!--[Carrier's model class]-->
+                <model>Markup\Matkahuolto\Model\Carrier</model>
+                <!--[Error message displays on storefront if carrier's methods unavailable]-->
+                <specificerrmsg>This shipping method is currently unavailable. If you would like to ship using this shipping method, please contact us.</specificerrmsg>
+                <handling_type>F</handling_type>
+                <userid backend_model="Magento\Config\Model\Config\Backend\Encrypted" />
+                <password backend_model="Magento\Config\Model\Config\Backend\Encrypted" />
+                <isproduction>0</isproduction>
+                <vak_enabled>0</vak_enabled>
+                <office_type_vak>all</office_type_vak>
+            </matkahuolto>
+        </carriers>
+        <payment>
+            <bussiennakko>
+                <active>0</active>
+                <model>Markup\Matkahuolto\Model\Bussiennakko</model>
+                <order_status>pending</order_status>
+                <title>Bussiennakko</title>
+                <allowspecific>0</allowspecific>
+                <group>bussiennakko_payment_method</group>
+                <cod_fee></cod_fee>
+                <cod_iban></cod_iban>
+                <cod_bic></cod_bic>
+            </bussiennakko>
+        </payment>
+    </default>
+</config>

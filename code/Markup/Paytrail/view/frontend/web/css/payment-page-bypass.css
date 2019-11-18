@@ -1,0 +1,112 @@
+.paytrail-payment-methods {
+  margin-bottom: 20px;
+}
+
+.paytrail-payment-methods:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.paytrail-payment-methods .paytrail-payment-method {
+  float: left;
+  border: 1px solid #e3e3e3;
+  cursor: pointer;
+  width: 18.4%;
+  box-sizing: border-box;
+  margin-right: 2%;
+  margin-bottom: 2%;
+  text-align: center;
+  padding: 5px 10px;
+}
+
+.paytrail-payment-methods .paytrail-payment-method-title {
+  font-size: 0.9em;
+  white-space: nowrap;
+  margin-bottom: 3px;
+  display: none; /* Hidden for now, maybe shown by overriding this in a theme */
+}
+
+.paytrail-payment-methods .paytrail-payment-method.active {
+  border-color: #FF5501;
+}
+
+.paytrail-payment-methods .paytrail-payment-method:hover,
+.paytrail-payment-methods .paytrail-payment-method:not(.active):hover {
+  border-color: #FFA273;
+}
+
+.paytrail-payment-methods .paytrail-payment-method input[type="radio"] {
+}
+
+.paytrail-payment-methods .paytrail-payment-method:nth-child(5n+0) {
+  margin-right: 0;
+}
+
+.paytrail-payment-methods .paytrail-payment-method-logo {
+  width: 120px;
+  height: 60px;
+  margin: auto;
+  max-width: 100%;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: contain;
+}
+
+.paytrail-payment-methods #paytrail-payment-method-1 .paytrail-payment-method-logo { background-image: url("../images/payment-methods/1.png"); }
+.paytrail-payment-methods #paytrail-payment-method-2 .paytrail-payment-method-logo { background-image: url("../images/payment-methods/2.png"); }
+.paytrail-payment-methods #paytrail-payment-method-3 .paytrail-payment-method-logo { background-image: url("../images/payment-methods/3.png"); }
+.paytrail-payment-methods #paytrail-payment-method-5 .paytrail-payment-method-logo { background-image: url("../images/payment-methods/5.png"); }
+.paytrail-payment-methods #paytrail-payment-method-6 .paytrail-payment-method-logo { background-image: url("../images/payment-methods/6.png"); }
+.paytrail-payment-methods #paytrail-payment-method-9 .paytrail-payment-method-logo { background-image: url("../images/payment-methods/9.png"); }
+.paytrail-payment-methods #paytrail-payment-method-10 .paytrail-payment-method-logo { background-image: url("../images/payment-methods/10.png"); }
+.paytrail-payment-methods #paytrail-payment-method-11 .paytrail-payment-method-logo { background-image: url("../images/payment-methods/11.png"); }
+.paytrail-payment-methods #paytrail-payment-method-12 .paytrail-payment-method-logo { background-image: url("../images/payment-methods/12.png"); }
+.paytrail-payment-methods #paytrail-payment-method-18 .paytrail-payment-method-logo { background-image: url("../images/payment-methods/18.png"); }
+.paytrail-payment-methods #paytrail-payment-method-19 .paytrail-payment-method-logo { background-image: url("../images/payment-methods/19.png"); }
+.paytrail-payment-methods #paytrail-payment-method-30 .paytrail-payment-method-logo { background-image: url("../images/payment-methods/30.png"); }
+.paytrail-payment-methods #paytrail-payment-method-31 .paytrail-payment-method-logo { background-image: url("../images/payment-methods/31.png"); }
+.paytrail-payment-methods #paytrail-payment-method-34 .paytrail-payment-method-logo { background-image: url("../images/payment-methods/34.png"); }
+.paytrail-payment-methods #paytrail-payment-method-35 .paytrail-payment-method-logo { background-image: url("../images/payment-methods/35.png"); }
+.paytrail-payment-methods #paytrail-payment-method-36 .paytrail-payment-method-logo { background-image: url("../images/payment-methods/36.png"); }
+.paytrail-payment-methods #paytrail-payment-method-50 .paytrail-payment-method-logo { background-image: url("../images/payment-methods/50.png"); }
+.paytrail-payment-methods #paytrail-payment-method-51 .paytrail-payment-method-logo { background-image: url("../images/payment-methods/51.png"); }
+.paytrail-payment-methods #paytrail-payment-method-52 .paytrail-payment-method-logo { background-image: url("../images/payment-methods/52.png"); }
+.paytrail-payment-methods #paytrail-payment-method-53 .paytrail-payment-method-logo { background-image: url("../images/payment-methods/53.png"); }
+.paytrail-payment-methods #paytrail-payment-method-54 .paytrail-payment-method-logo { background-image: url("../images/payment-methods/54.png"); }
+.paytrail-payment-methods #paytrail-payment-method-55 .paytrail-payment-method-logo { background-image: url("../images/payment-methods/55.png"); }
+.paytrail-payment-methods #paytrail-payment-method-56 .paytrail-payment-method-logo { background-image: url("../images/payment-methods/56.png"); }
+.paytrail-payment-methods #paytrail-payment-method-57 .paytrail-payment-method-logo { background-image: url("../images/payment-methods/57.png"); }
+.paytrail-payment-methods #paytrail-payment-method-58 .paytrail-payment-method-logo { background-image: url("../images/payment-methods/58.png"); }
+.paytrail-payment-methods #paytrail-payment-method-60 .paytrail-payment-method-logo { background-image: url("../images/payment-methods/60.png"); }
+.paytrail-payment-methods #paytrail-payment-method-61 .paytrail-payment-method-logo { background-image: url("../images/payment-methods/61.png"); }
+
+@media only screen and (max-width : 1023px) {
+  .paytrail-payment-methods .paytrail-payment-method {
+    width: 23.5%;
+  }
+
+  .paytrail-payment-methods .paytrail-payment-method:nth-child(5n+0) { margin-right: 2%; }
+  .paytrail-payment-methods .paytrail-payment-method:nth-child(4n+0) { margin-right: 0; }
+}
+
+@media only screen and (max-width : 767px) {
+  .paytrail-payment-methods .paytrail-payment-method {
+    width: 32%;
+  }
+
+  .paytrail-payment-methods .paytrail-payment-method:nth-child(5n+0),
+  .paytrail-payment-methods .paytrail-payment-method:nth-child(4n+0) { margin-right: 2%; }
+  .paytrail-payment-methods .paytrail-payment-method:nth-child(3n+0) { margin-right: 0; }
+}
+
+@media only screen and (max-width : 320px) {
+  .paytrail-payment-methods .paytrail-payment-method {
+    width: 49%;
+  }
+
+  .paytrail-payment-methods .paytrail-payment-method:nth-child(5n+0),
+  .paytrail-payment-methods .paytrail-payment-method:nth-child(4n+0),
+  .paytrail-payment-methods .paytrail-payment-method:nth-child(3n+0) { margin-right: 2%; }
+  .paytrail-payment-methods .paytrail-payment-method:nth-child(2n+0) { margin-right: 0; }
+}

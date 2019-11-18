@@ -1,0 +1,69 @@
+2.2.9
+
+* Muutettu tilausrivien summien käsittelyä niin, että se tukee paremmin ilman alvia syötettyjä hintoja
+
+2.2.8
+
+* Lisätty parempi tuki ulkomaisille postinumeroille maksusivun ohitusta käytettäessä
+
+2.2.7
+
+* Lisätty hintojen pyöristys kahteen desimaaliin. Jossain tapauksissa alennuksen summa voi olla sentin osia, joka aiheuttaa ilman pyöristystä virheen.
+
+2.2.6
+
+* Lisätty tilitysviite transaktion tietoihin maksusivun ohitusta käytettäessä
+* Lisätty Magenton maksutavan JS-validaatio kassalle
+
+2.2.5
+
+* Korjattu bugi, joka esti tilauksen kokonaissumman laskemisen oikein bundle-tuotteilla Magento 2.2.x versioissa
+
+2.2.4
+
+* Poistettu Paytrail-tili maksutavoista (poistunut maksutapa)
+* Päivitetty maksutapojen logoja maksusivun ohituksessa
+* Korjattu bugi, joka esti virheilmoituksen näyttämisen maksusivun ohituksessa, jos toimitusehdot jätettiin hyväksymättä
+
+2.2.3
+
+* Lisätty maksusivun ohitukseen liian pitkien tuotenimien ja asiakastietojen katkaisu, koska ne aiheuttivat maksun epäonnistumisen aiemmin.
+
+2.2.2
+
+* Parannettu tukea alennuksille
+
+2.2.1
+
+* Lisätty maksusivun ohitukseen asiakas- ja tuotetietojen siistiminen (erikoismerkkien poistaminen), joka esti maksamisen joissakin tapauksissa.
+
+2.2.0
+
+* Lisätty tuki maksunpalautuksille
+* Korjattu bugi, joka esti dynaamisen hinnoittelun käytön bundle-tuotteilla
+
+2.1.1
+
+* Parannettu maksusivun ohituksen käyttöliittymää. Maksutavat on nyt jaoteltu tyypin mukaan (verkkomaksu, luottokortti yms.) kassalla.
+
+2.1.0
+
+* Lisätty tuki maksusivun ohitukselle
+* Lisätty asetuksiin kielivalinta
+
+2.0.3
+
+* Korjattu toimituskulujen alv:n pyöristysvirhe (joissain tapauksissa Paytrailissa näkyi 24.1% tai 23.9% eikä 24%)
+
+2.0.2
+
+* Lisätty mahdollisuus lisätä lyhyt kuvaus / teksti kassalle Paytrail-maksutapaan.
+
+2.0.1
+
+* Tilaukselle tehdään jatkossa lasku (Invoice) automaattisesti onnistuneen maksun jälkeen
+* Tilauksen tilaksi tulee oletuksena Processing (ennen Pending). Vaihdettavissa ylläpidosta.
+
+2.0.0
+
+* Ensimmäinen versio
