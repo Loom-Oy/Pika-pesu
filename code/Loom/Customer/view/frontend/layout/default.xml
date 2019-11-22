@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<!--
+/*
+ * @package    Loom_Customer
+ * @copyright  Loom Oy - 2019
+ */
+ -->
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <body>
+        <referenceBlock name="top.links">
+            <block class="Loom\Customer\Block\Account\Link" name="account-link" as="account-link" template="Loom_Customer::account/account.phtml" before="authorization-link-logout" />
+        </referenceBlock>
+    </body>
+</page>

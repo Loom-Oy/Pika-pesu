@@ -1,0 +1,21 @@
+{
+  "name": "loom/module-customer",
+  "description": "Replace Magento sign in and register pages with popup",
+  "version": "1.1.1",
+  "license": "MIT",
+  "type": "magento2-module",
+  "repositories": [
+    {
+      "type": "git",
+      "url": "https://github.com/loom/module-customer"
+    }
+  ],
+  "autoload": {
+    "files": [
+      "registration.php"
+    ],
+    "psr-4": {
+      "Loom\\Customer\\": ""
+    }
+  }
+}

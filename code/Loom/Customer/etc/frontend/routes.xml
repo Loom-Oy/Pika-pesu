@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<!--
+/*
+ * @package    Loom_Customer
+ * @copyright  Loom Oy - 2019 
+ */
+ -->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:App/etc/routes.xsd">
+    <router id="standard">
+        <route id="customer" frontName="customer">
+            <module name="Loom_Customer" />
+        </route>
+    </router>
+</config>

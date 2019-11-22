@@ -1,0 +1,17 @@
+<?php
+/*
+ * @package    Loom_Customer
+ * @copyright  Loom Oy - 2019
+ */
+
+// @codingStandardsIgnoreFile
+
+/** @var \Loom\Customer\Block\Account\Link $block */
+
+if ($block->isLoggedIn()): ?>
+    <li class="authorization-link">
+        <a href="<?php echo $block->getAccountUrl() ?>">
+            <?php echo __('My Account') ?>
+        </a>
+    </li>
+<?php endif; ?>

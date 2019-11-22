@@ -1,0 +1,25 @@
+<?php
+/*
+ * @package    Loom_Customer
+ * @copyright  Loom Oy - 2019
+ */
+
+// @codingStandardsIgnoreFile
+
+/** @var \Magento\Customer\Block\Account\AuthenticationPopup $block */
+?>
+
+<div id="customer-login-popup" data-bind="scope:'customer'" style="display: none;">
+    <script>
+        window.customer = <?= /* @noEscape */ $block->getSerializedConfig() ?>;
+    </script>
+    <!-- ko template: getTemplate() --><!-- /ko -->
+    <script type="text/x-magento-init">
+        {
+            "#customer-login-popup": {
+                "Magento_Ui/js/core/app": <?= /* @noEscape */ $block->getJsLayout() ?>,
+                "innerWidth": "400"
+            }
+        }
+    </script>
+</div>
