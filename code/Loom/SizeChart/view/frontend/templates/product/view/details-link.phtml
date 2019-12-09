@@ -1,0 +1,23 @@
+<?php
+/*
+ * @package    Loom_SizeChart
+ * @copyright  Loom Oy - 2019
+ */
+
+// @codingStandardsIgnoreFile
+
+?>
+
+<div>
+    <span><a id="scroll-link" href="#"><?php echo __('SEE DETAILS'); ?></a></span>
+</div>
+
+<script type="text/javascript">
+    require(['jquery', 'domReady!'], function($) {
+        $("#scroll-link").click(function () {
+            $('html, body').animate({
+                scrollTop: $("#tab-label-description").offset().top
+            }, 500);
+        } );
+    });
+</script>

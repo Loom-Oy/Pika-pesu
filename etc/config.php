@@ -220,6 +220,7 @@ return [
         'Klarna_Ordermanagement' => 1,
         'Klarna_Kp' => 1,
         'Loom_Customer' => 1,
+        'Loom_SizeChart' => 1,
         'Magento_PaypalReCaptcha' => 1,
         'MSP_TwoFactorAuth' => 1,
         'Magefan_Community' => 1,

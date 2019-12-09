@@ -95,6 +95,28 @@ div.value ul {
     border-bottom: none !important;
 }
 
+.sizechart-wrapper {
+    float: right !important;
+}
+
+.measure_icon {
+    vertical-align: middle !important;
+}
+
+.chart_text {
+    text-decoration: underline !important;
+}
+
+#scroll-link {
+    font-weight: bold !important;
+    text-decoration: underline !important;
+    color: #0688c6 !important;
+}
+
+.product-info-stock-sku {
+    text-align: right !important;
+}
+
 /* Catalog page and product page styles END */
 
 
@@ -248,9 +270,14 @@ div.field-error::before {
 
 
 /* Modal styles */
+@media only screen and (min-width: 768px) {
+    .modal-slide .modal-inner-wrap, .modal-popup .modal-inner-wrap {
+        width: max-content !important;
+    }
+}
+
 .modal-slide .modal-inner-wrap, .modal-popup .modal-inner-wrap {
     border: 3px solid #000 !important;
-    width: max-content !important;
 }
 
 .modal-popup .modal-header {

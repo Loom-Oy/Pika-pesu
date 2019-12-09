@@ -1,0 +1,21 @@
+{
+  "name": "loom/module-sizechart",
+  "description": "Add size chart link next to size select in product view. Displays size chart in a modal.",
+  "version": "1.0.0",
+  "license": "MIT",
+  "type": "magento2-module",
+  "repositories": [
+    {
+      "type": "git",
+      "url": "https://github.com/loom/"
+    }
+  ],
+  "autoload": {
+    "files": [
+      "registration.php"
+    ],
+    "psr-4": {
+      "Loom\\SizeChart\\": ""
+    }
+  }
+}

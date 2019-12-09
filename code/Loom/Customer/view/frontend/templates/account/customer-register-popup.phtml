@@ -21,12 +21,13 @@
             <fieldset class="fieldset create info">
                 <legend class="legend"><span><?php /* @escapeNotVerified */ echo __('Personal Information') ?></span></legend><br>
                 <?php echo $block->getLayout()->createBlock('Magento\Customer\Block\Widget\Name')->setObject($block->getFormData())->setForceUseCustomerAttributes(true)->toHtml() ?>
-                <?php if ($block->isNewsletterEnabled()): ?>
-                    <div class="field choice newsletter">
+                <!-- Force remove newsletter from signup. Ability to disable newsletter module is not yet added in Magento 2.3.2 version -->
+                <?php //if ($block->isNewsletterEnabled()): ?>
+                    <!-- <div class="field choice newsletter">
                         <input type="checkbox" name="is_subscribed" title="<?php /* @escapeNotVerified */ echo __('Sign Up for Newsletter') ?>" value="1" id="popup-is_subscribed" class="checkbox">
                         <label for="is_subscribed" class="label"><span><?php /* @escapeNotVerified */ echo __('Sign Up for Newsletter') ?></span></label>
-                    </div>
-                <?php endif ?>
+                    </div> -->
+                <?php //endif ?>
             </fieldset>
             <fieldset class="fieldset create account" data-hasrequired="<?php /* @escapeNotVerified */ echo __('* Required Fields') ?>">
                 <legend class="legend"><span><?php /* @escapeNotVerified */ echo __('Sign-in Information') ?></span></legend><br>
