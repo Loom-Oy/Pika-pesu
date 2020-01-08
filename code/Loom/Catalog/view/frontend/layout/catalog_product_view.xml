@@ -1,10 +1,10 @@
 <?xml version="1.0"?>
 <!--
-/**
- * Copyright © Magento, Inc. All rights reserved.
- * See COPYING.txt for license details.
+/*
+ * @package    Loom_Customer
+ * @copyright  Loom Oy - 2019
  */
--->
+ -->
 <page layout="1column" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
     <head>
         <css src="mage/gallery/gallery.css"/>
@@ -36,13 +36,13 @@
         </referenceBlock>
         <referenceBlock name="breadcrumbs" remove="true" />
         <referenceContainer name="page.top">
-            <block class="Loom\SizeChart\Block\Breadcrumbs" name="product.view.breadcrumbs" template="Loom_SizeChart::product/breadcrumbs.phtml" />       
+            <block class="Loom\Catalog\Block\Breadcrumbs" name="product.view.breadcrumbs" template="Loom_Catalog::product/breadcrumbs.phtml" />       
         </referenceContainer>
 
         <referenceContainer name="content">
             <container name="product.info.main" htmlTag="div" htmlClass="product-info-main" before="-">
                 <container name="product.info.price" label="Product info auxiliary container" htmlTag="div" htmlClass="product-info-price">
-                <block class="Magento\Framework\View\Element\Template" name="product.details.link" template="Loom_SizeChart::product/view/details-link.phtml" before="-" />
+                <block class="Magento\Framework\View\Element\Template" name="product.details.link" template="Loom_Catalog::product/view/details-link.phtml" before="-" />
                     <container name="product.info.stock.sku" label="Product auxiliary info" htmlTag="div" htmlClass="product-info-stock-sku">
                         <container name="product.info.type" before="-"/>
                         <block class="Magento\Catalog\Block\Product\View\Description" name="product.info.sku" template="Magento_Catalog::product/view/attribute.phtml" after="product.info.type">
@@ -77,7 +77,7 @@
                         <block class="Magento\Catalog\Block\Product\View" name="product.info.addtocart" as="addtocart" template="Magento_Catalog::product/view/addtocart.phtml"/>
                     </container>
                     <block class="Magento\Framework\View\Element\Template" name="product.info.form.options" as="options_container">
-                    <block class="Magento\Catalog\Block\Product\View" name="product.info.form.sizechart" as="sizechart_container" template="Loom_SizeChart::product/view/sizechart.phtml" before="-" />
+                    <block class="Magento\Catalog\Block\Product\View" name="product.info.form.sizechart" as="sizechart_container" template="Loom_Catalog::product/view/sizechart.phtml" before="-" />
                         <block class="Magento\Catalog\Block\Product\View" name="product.info.options.wrapper" as="product_options_wrapper" template="Magento_Catalog::product/view/options/wrapper.phtml">
                             <block class="Magento\Catalog\Block\Product\View\Options" name="product.info.options" as="product_options" template="Magento_Catalog::product/view/options.phtml">
                                 <block class="Magento\Catalog\Block\Product\View\Options\Type\DefaultType" name="product.info.options.default" as="default" template="Magento_Catalog::product/view/options/type/default.phtml"/>

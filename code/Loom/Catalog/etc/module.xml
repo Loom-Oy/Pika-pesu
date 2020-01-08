@@ -1,12 +1,12 @@
 <?xml version="1.0"?>
 <!--
 /*
- * @package    Loom_SizeChart
+ * @package    Loom_Catalog
  * @copyright  Loom Oy - 2019
  */
  -->
 <config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Module/etc/module.xsd">
-    <module name="Loom_SizeChart" setup_version="1.0.0">
+    <module name="Loom_Catalog" setup_version="1.0.0">
         <sequence>
             <module name="Magento_ConfigurableProduct" />
             <module name="Magento_Catalog"/>

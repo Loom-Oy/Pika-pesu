@@ -1,13 +1,13 @@
 <?php
 /*
- * @package    Loom_SizeChart
+ * @package    Loom_Catalog
  * @copyright  Loom Oy - 2019
  */
 
 // @codingStandardsIgnoreFile
 
 
-namespace Loom\SizeChart\Block;
+namespace Loom\Catalog\Block;
 
 use Magento\Catalog\Helper\Data;
 use Magento\Framework\View\Element\Template\Context;

@@ -7,8 +7,9 @@ namespace Loom\Customer\Block\Account;
 use Magento\Customer\Model\Url;
 use Magento\Framework\App\Http\Context;
 use Magento\Framework\View\Element\Template;
+use Magento\Customer\Block\Account\SortLinkInterface;
 
-class Link extends Template
+class Link extends Template implements SortLinkInterface
 {
     /** @var Url $_customerUrl */
     protected $_customerUrl;
@@ -52,5 +53,10 @@ class Link extends Template
     public function getAccountUrl()
     {
         return $this->_customerUrl->getAccountUrl();
+    }
+
+    public function getSortOrder()
+    {
+        return $this->getData(self::SORT_ORDER);
     }
 }

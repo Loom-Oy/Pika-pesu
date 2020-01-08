@@ -8,7 +8,12 @@
 <page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
     <body>
         <referenceBlock name="top.links">
-            <block class="Loom\Customer\Block\Account\Link" name="account-link" as="account-link" template="Loom_Customer::account/account.phtml" before="authorization-link-logout" />
+            <block class="Loom\Customer\Block\Account\Link" name="account-link" as="account-link" template="Loom_Customer::account/account.phtml" before="authorization-link-logout">
+                <arguments>
+                    <argument name="label" xsi:type="string" translate="true">My Account</argument>
+                    <argument name="sortOrder" xsi:type="number">1</argument>
+                </arguments>
+            </block>
         </referenceBlock>
     </body>
 </page>

@@ -1,6 +1,6 @@
 <?php
 /*
- * @package    Loom_SizeChart
+ * @package    Loom_Catalog
  * @copyright  Loom Oy - 2019
  */
 
@@ -9,19 +9,18 @@
 ?>
 
 <?php
-//$_helper = $this->helper('Magento\Catalog\Helper\Output');
 $product = $block->getProduct();
 $manufacturer = $product->getResource()->getAttribute('manufacturer')->getFrontend()->getValue($product);
 $gender = $product->getResource()->getAttribute('gender')->getFrontend()->getValue($product);
 ?>
     <div class="sizechart-wrapper">
         <a href="#" id="sizechart-link">
-            <span><img class="measure_icon" src="<?php echo $this->getViewFileUrl('Loom_SizeChart::images/sizechart_icon.png'); ?>" /></span>
+            <span><img class="measure_icon" src="<?php echo $this->getViewFileUrl('Loom_Catalog::images/sizechart_icon.png'); ?>" /></span>
             <span class="chart_text"><?php echo __('Sizechart'); ?></span>
         </a>
     </div>
     <div id="sizechart-modal" style="display:none;">
-        <?php if (strstr($gender, 'Unisex')) { ?>
+        <?php if ((strstr($gender, 'Unisex') && ('Hejco' !== $manufacturer))) { ?>
             <br />
             <span><h2><?php echo __('Men'); ?></h2></span>
             <?php echo $block->getLayout()->createBlock('Magento\Cms\Block\Block')
