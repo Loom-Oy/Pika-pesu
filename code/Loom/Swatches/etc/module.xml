@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<!--
+/*
+ * @package    Loom_Swatches
+ * @copyright  Loom Oy - 2020
+ */
+ -->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Module/etc/module.xsd">
+    <module name="Loom_Swatches" setup_version="1.0.0">
+        <sequence>
+            <module name="Magento_Swatches" />
+        </sequence>
+    </module>
+</config>

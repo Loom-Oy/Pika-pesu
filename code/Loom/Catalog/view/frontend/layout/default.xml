@@ -1,0 +1,13 @@
+<!--
+/*
+ * @package    Loom_Customer
+ * @copyright  Loom Oy - 2020
+ */
+ -->
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <body>
+        <referenceContainer name="content">
+            <block class="Magento\Framework\View\Element\Template" name="minicart.autoopen" template="Loom_Catalog::minicart_open.phtml"/>
+        </referenceContainer>
+    </body>
+</page>

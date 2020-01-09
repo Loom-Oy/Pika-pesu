@@ -221,6 +221,7 @@ return [
         'Klarna_Kp' => 1,
         'Loom_Catalog' => 1,
         'Loom_Customer' => 1,
+        'Loom_Swatches' => 1,
         'Magento_PaypalReCaptcha' => 1,
         'MSP_TwoFactorAuth' => 1,
         'Magefan_Community' => 1,
