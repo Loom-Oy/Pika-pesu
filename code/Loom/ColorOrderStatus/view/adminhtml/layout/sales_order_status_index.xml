@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<!--
+ /*
+ * @package    Loom_ColorOrderStatus
+ * @copyright  Loom Oy - 2020
+ */
+ -->
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <body>
+        <referenceBlock name="sales_order_status.grid.columnSet">
+            <block class="Loom\ColorOrderStatus\Block\Status\Grid\Column\Color" name="sales_order_status.grid.columnSet.color" before="unassign" as="color">
+                <arguments>
+                    <argument name="header" xsi:type="string" translate="true">Color</argument>
+                    <argument name="index" xsi:type="string">color</argument>
+                    <argument name="type" xsi:type="string">text</argument>
+                    <argument name="sortable" xsi:type="string">0</argument>
+                    <argument name="filter" xsi:type="string">0</argument>
+                    <argument name="column_css_class" xsi:type="string">col-actions</argument>
+                    <argument name="header_css_class" xsi:type="string">col-actions</argument>
+                </arguments>
+            </block>
+        </referenceBlock>
+    </body>
+</page>

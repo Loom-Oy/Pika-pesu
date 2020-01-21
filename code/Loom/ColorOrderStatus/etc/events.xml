@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<!--
+ /*
+ * @package    Loom_ColorOrderStatus
+ * @copyright  Loom Oy - 2020
+ */
+ -->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Event/etc/events.xsd">
+    <event name="adminhtml_block_html_before">
+        <observer name="belvg_adminhtml_block_html_before_sales_assign"
+                  instance="Loom\ColorOrderStatus\Observer\EditStatusFormBeforeHtml" />
+    </event>
+</config>

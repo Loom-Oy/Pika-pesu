@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<!--
+ /*
+ * @package    Loom_ColorOrderStatus
+ * @copyright  Loom Oy - 2020
+ */
+ -->
+<layout xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/layout_generic.xsd">
+    <body>
+        <referenceBlock name="adminhtml.customer.edit.tab.orders">
+            <block class="Magento\Backend\Block\Widget\Grid\ColumnSet" as="grid.columnSet" name="customer_orders.grid.columnSet">
+                <block class="Loom\ColorOrderStatus\Block\Status\Grid\Column\ColorCustomer" name="sales_order_status.grid.columnSet.color" after="grand_total" as="color">
+                    <arguments>
+                        <argument name="index" xsi:type="string">status</argument>
+                        <argument name="type" xsi:type="string">text</argument>
+                        <argument name="sortable" xsi:type="string">0</argument>
+                        <argument name="filter" xsi:type="string">0</argument>
+                        <argument name="column_css_class" xsi:type="string">no-column</argument>
+                        <argument name="header_css_class" xsi:type="string">no-column</argument>
+                    </arguments>
+                </block>
+            </block>
+        </referenceBlock>
+    </body>
+</layout>

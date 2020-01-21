@@ -1,0 +1,24 @@
+{
+  "name": "loom/module-color-order-status",
+  "description": "Add possibility to add colors to order statuses",
+  "type": "magento2-module",
+  "version": "1.0.0",
+  "license": "MIT",
+  "repositories": [
+    {
+      "type": "git",
+      "url": "https://github.com/loom/"
+    }
+  ],
+  "require": {
+    "php": "7.0.2|7.0.4|~7.0.6|~7.1.0|~7.2.0"
+  },
+  "autoload": {
+    "files": [
+      "registration.php"
+    ],
+    "psr-4": {
+      "Loom\\ColorOrderStatus\\": ""
+    }
+  }
+}

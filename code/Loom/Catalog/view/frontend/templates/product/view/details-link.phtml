@@ -16,7 +16,7 @@
     require(['jquery', 'domReady!'], function($) {
         $("#scroll-link").click(function () {
             $('html, body').animate({
-                scrollTop: $("#tab-label-description").offset().top
+                scrollTop: $("#tab-label-description").offset().top-48
             }, 500);
         } );
     });

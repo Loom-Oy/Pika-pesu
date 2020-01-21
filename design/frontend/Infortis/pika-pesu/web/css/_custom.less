@@ -214,7 +214,7 @@ div.mage-error[generated] {
     font-size: 0.85em;
     text-align: center;
     position: relative;
-    width: max-content !important;
+    display: table !important;
 }
 
 div.mage-error[generated]::before {
@@ -240,7 +240,8 @@ div.field-error {
     font-size: 0.85em !important;
     text-align: center !important;
     position: relative !important;
-    width: max-content !important;
+    /* width: max-content !important; */
+    display: table !important;
 }
 
 div.field-error::before {
@@ -268,6 +269,10 @@ div.field-error::before {
     margin: 0px 0 0 !important;
     font-size: 55px !important;
     line-height: 28px !important;
+}
+
+.header-container .mini-cart.dropdown-block, .header-container .mini-compare.dropdown-block {
+    right: 15px !important;
 }
 
 /* General styles END */
@@ -340,6 +345,138 @@ button:hover, .cart.table-wrapper .actions-toolbar > .action:hover, .action-gift
     float: none !important;
 }
 
+/* Checkout page styles */
+
+.firecheckout #checkout #shipping, .firecheckout #checkout #opc-shipping_method, .firecheckout #checkout #payment {
+    border: 3px solid #000 !important;
+}
+
+.firecheckout #checkout .opc-sidebar {
+    top: 0 !important;
+    border: 3px solid #000 !important;
+    position: sticky !important;
+}
+
+.firecheckout #checkout .opc-wrapper .step-title, .firecheckout #checkout .opc-block-summary > .title, .firecheckout #checkout .opc-sidebar .step-title {
+    background-color: #000 !important;
+    color: #fff !important;
+    font-weight: 600 !important;
+    padding: 10px 6px 10px !important;
+    margin-bottom: 3px !important;
+}
+
+.firecheckout #checkout .opc-wrapper .step-title::before, .firecheckout #checkout .opc-block-summary > .title::before, .firecheckout #checkout .opc-sidebar .step-title::before {
+    background: #0688c6 !important;
+    width: 35px !important;
+    height: 35px !important;
+    line-height: 34px !important;
+    font-weight: 600 !important;
+    border-radius: 18px !important;
+    font-size: 20px !important;
+}
+
+.firecheckout .field-tooltip .field-tooltip-content {
+    border: 3px solid #000 !important;
+    background-color: #fff1cf !important;
+}
+
+.firecheckout .field-tooltip .field-tooltip-content::before {
+    border-right-color: #000 !important;
+    left: -22px !important;
+}
+
+.firecheckout .field-tooltip .field-tooltip-content::after {
+    border-right-color: #fff1cf;
+}
+
+.firecheckout .items-in-cart > .minicart-items::after {
+    background: unset !important;
+}
+
+#checkout .opc-block-summary .details-qty .qty-wrapper {
+    width: 100px !important;
+    height: 55px !important;
+}
+
+.firecheckout #checkout .opc-block-summary .details-qty .qty-wrapper, #checkout .opc-block-summary .details-qty .qty-wrapper {
+    border: 0px !important;
+}
+
+#checkout .opc-block-summary .details-qty .qty-wrapper .qty {
+    width: 45px !important;
+    height: 45px !important;
+    border: 3px solid #000 !important;
+}
+
+#checkout .opc-block-summary .details-qty .qty-wrapper .qty-toggler.qty-less {
+    bottom: 10px !important;
+}
+
+#checkout .opc-block-summary .details-qty .qty-wrapper .qty-toggler {
+    right: 30px !important;
+    height: 21px !important;
+    width: 21px !important;
+    border-left: unset !important;
+    color: #fff !important;
+    background: #000 !important;
+}
+
+#checkout .opc-block-summary .details-qty .qty-wrapper .qty-toggler:hover {
+    color: #fff !important;
+    background: #0688c6 !important;
+}
+
+.qty-less::before {
+    content: "\e261" !important;
+    font-family: ThemeIcons !important;
+}
+
+.qty-more::before {
+    content: "\e262" !important;
+    font-family: ThemeIcons !important;
+}
+
+.action.action-auth-toggle {
+    padding: 10px !important;
+    font-size: inherit !important;
+    font-weight: 600 !important;
+}
+
+.firecheckout .checkout-agreement .action {
+    color: #0688c6 !important;
+    font-weight: bold !important;
+    text-decoration: underline !important;
+}
+
+.firecheckout #checkout .opc-sidebar {
+    top: 45px !important;
+}
+
+.field-tooltip .field-tooltip-content::after {
+    width: 4px !important;
+}
+
+.paytrail-payment-methods .paytrail-payment-method input[type="radio"] {
+    display: none !important;
+}
+
+.paytrail-payment-methods .paytrail-payment-method {
+    border: 3px solid #000 !important;
+    width: 31% !important;
+}
+
+.paytrail-payment-methods .paytrail-payment-method.active, .paytrail-payment-methods .paytrail-payment-method:hover, .paytrail-payment-methods .paytrail-payment-method:not(.active):hover {
+    border-color: #000 !important;
+    background-color: #0688c6 !important;
+}
+
+.paytrail-payment-methods .paytrail-payment-method:nth-child(5n) {
+    margin-right: 2% !important;
+}
+
+.action.primary:focus {
+    background-color: #000 !important;
+}
 
 /* Mobile specific styles */
 .header-mobile .skip-link.skip-active {
