@@ -9,5 +9,6 @@
     <body>
         <referenceBlock name="wish-list-link" remove="true" /> <!-- Remove WishList Link -->
         <referenceBlock name="my-account-link" remove="true" /> <!--  Remove My Account Link -->
+        <referenceBlock name="sale.reorder.sidebar" remove="true"/> <!--  Remove Recently Ordered Block from Sidebar -->
     </body>
 </page>

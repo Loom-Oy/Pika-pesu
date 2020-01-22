@@ -1,0 +1,39 @@
+.page-layout-admin-login .page-wrapper {
+    background-color: #0688c6 !important;
+    border: 3px solid #000 !important;
+}
+
+.message, .order-errors .admin__fieldset-wrapper .title {
+    border: 3px solid #000 !important;
+}
+
+.message-system-inner .message, .message-system-inner .order-errors .admin__fieldset-wrapper .title {
+    border: none !important;
+}
+
+.message-system-inner {
+    border: 3px solid #ffa700 !important;
+}
+
+.admin__control-text, .admin__control-select, .admin__control-multiselect, .admin__control-file-label::before, .admin__control-textarea, .admin__control-addon [class*="admin__control-"][class] ~ [class*="admin__addon-"]:last-child::before, .selectmenu, [class*="adminhtml-giftwrapping-"] .field-base_price .admin__control-addon [class*="admin__control-"][class] ~ .addafter:last-child::before, .ui-datepicker .ui-datepicker-title select {
+    border: 3px solid #000 !important;
+}
+
+.action-primary {
+    border: none !important;
+    background-color: #000 !important;
+}
+
+.action-primary:hover, .action-primary:active, .action-primary:focus {
+    border: none !important;
+    background-color: #006b9d !important;
+}
+
+.page-layout-admin-login .admin__legend {
+    color: #000 !important;
+    font-weight: 600 !important;
+}
+
+.admin__scope-old input[type="text"], .admin__scope-old input[type="password"], .admin__scope-old input[type="datetime"], .admin__scope-old input[type="datetime-local"], .admin__scope-old input[type="date"], .admin__scope-old input[type="month"], .admin__scope-old input[type="time"], .admin__scope-old input[type="week"], .admin__scope-old input[type="number"], .admin__scope-old input[type="range"], .admin__scope-old input[type="email"], .admin__scope-old input[type="url"], .admin__scope-old input[type="search"], .admin__scope-old input.search, .admin__scope-old input[type="tel"], .admin__scope-old input[type="color"], .admin__scope-old textarea, .admin__scope-old select {
+    height: 38px !important;
+}

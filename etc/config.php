@@ -219,6 +219,7 @@ return [
         'Klarna_Core' => 0,
         'Klarna_Ordermanagement' => 0,
         'Klarna_Kp' => 0,
+        'Loom_Admin' => 1,
         'Loom_Catalog' => 1,
         'Loom_ColorOrderStatus' => 1,
         'Loom_Customer' => 1,
