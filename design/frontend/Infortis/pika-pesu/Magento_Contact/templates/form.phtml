@@ -1,0 +1,61 @@
+<?php
+/*
+ * @package    Infortis_pika-pesu
+ * @copyright  Loom Oy - 2019
+ */
+
+// @codingStandardsIgnoreFile
+/** @var \Magento\Contact\Block\ContactForm $block */
+?>
+<form class="form contact"
+      action="<?= $block->escapeUrl($block->getFormAction()) ?>"
+      id="contact-form"
+      method="post"
+      data-hasrequired="<?= $block->escapeHtmlAttr(__('* Required Fields')) ?>"
+      data-mage-init='{"validation":{}}'>
+    <fieldset class="fieldset">
+        <div class="field company required">
+            <label class="label" style="text-align: left !important" for="company"><span><?= $block->escapeHtml(__('Company Name')) ?></span></label>
+            <div class="control" style="float: unset !important">
+                <input name="company" id="company" title="<?= $block->escapeHtmlAttr(__('Company Name')) ?>" value="<?= $block->escapeHtmlAttr($this->helper('Magento\Contact\Helper\Data')->getPostValue('company')) ?>" class="input-text" type="text" data-validate="{required:true}"/>
+            </div>
+        </div>
+        <div class="field contact required">
+            <label class="label" style="text-align: left !important" for="contact"><span><?= $block->escapeHtml(__('Contact Person')) ?></span></label>
+            <div class="control" style="float: unset !important">
+                <input name="contact" id="contact" title="<?= $block->escapeHtmlAttr(__('Contact Person')) ?>" value="<?= $block->escapeHtmlAttr($this->helper('Magento\Contact\Helper\Data')->getPostValue('contact')) ?>" class="input-text" type="text" data-validate="{required:true}"/>
+            </div>
+        </div>
+        <div class="field email required">
+            <label class="label" style="text-align: left !important" for="email"><span><?= $block->escapeHtml(__('Email')) ?></span></label>
+            <div class="control" style="float: unset !important">
+                <input name="email" id="email" title="<?= $block->escapeHtmlAttr(__('Email')) ?>" value="<?= $block->escapeHtmlAttr($this->helper('Magento\Contact\Helper\Data')->getPostValue('email')) ?>" class="input-text" type="email" data-validate="{required:true, 'validate-email':true}"/>
+            </div>
+        </div>
+        <div class="field telephone required">
+            <label class="label" style="text-align: left !important" for="telephone"><span><?= $block->escapeHtml(__('Phone Number')) ?></span></label>
+            <div class="control" style="float: unset !important">
+                <input name="telephone" id="telephone" title="<?= $block->escapeHtmlAttr(__('Phone Number')) ?>" value="<?= $block->escapeHtmlAttr($this->helper('Magento\Contact\Helper\Data')->getPostValue('telephone')) ?>" class="input-text" type="text" data-validate="{required:true}" />
+            </div>
+        </div>
+        <div class="field comment">
+            <label class="label" style="text-align: left !important" for="comment"><span><?= $block->escapeHtml(__('How can we help?')) ?></span></label>
+            <div class="control" style="float: unset !important">
+                <textarea name="comment" id="comment" title="<?= $block->escapeHtmlAttr(__('How can we help?')) ?>" class="input-text" cols="5" rows="3" ><?= $block->escapeHtml($this->helper('Magento\Contact\Helper\Data')->getPostValue('comment')) ?></textarea>
+            </div>
+        </div>
+        <?= $block->getChildHtml('form.additional.info') ?>
+        <div>
+        <span style="color: red !important">* </span><span><?= $block->escapeHtml(__('Mandatory Fields')) ?></span>
+        </div>
+    </fieldset>
+    <div class="actions-toolbar" style="margin: 0 !important">
+        <div class="primary">
+            <input type="hidden" name="hideit" id="hideit" value="" />
+            <button type="submit" title="<?= $block->escapeHtmlAttr(__('Submit Request')) ?>" class="action submit primary">
+                <span><?= $block->escapeHtml(__('Submit Request')) ?></span>
+            </button>
+        </div>
+        
+    </div>
+</form>
