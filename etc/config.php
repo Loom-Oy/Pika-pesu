@@ -232,6 +232,7 @@ return [
         'Mageplaza_Core' => 1,
         'Markup_Matkahuolto' => 1,
         'Markup_Paytrail' => 1,
+        'Markup_Smartship' => 1,
         'Swissup_AddressAutocomplete' => 1,
         'Swissup_AddressFieldManager' => 1,
         'Swissup_Checkout' => 1,
