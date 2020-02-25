@@ -1,0 +1,21 @@
+{
+  "name": "loom/module-dlprime",
+  "description": "Create orders flat file for DL Prime",
+  "version": "1.1.1",
+  "license": "MIT",
+  "type": "magento2-module",
+  "repositories": [
+    {
+      "type": "git",
+      "url": "https://github.com/loom/module-dlprime"
+    }
+  ],
+  "autoload": {
+    "files": [
+      "registration.php"
+    ],
+    "psr-4": {
+      "Loom\\DLPrime\\": ""
+    }
+  }
+}

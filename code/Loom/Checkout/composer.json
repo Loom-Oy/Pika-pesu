@@ -1,0 +1,21 @@
+{
+  "name": "loom/module-checkout",
+  "description": "Restrict payment methods according to customer group",
+  "version": "1.1.1",
+  "license": "MIT",
+  "type": "magento2-module",
+  "repositories": [
+    {
+      "type": "git",
+      "url": "https://github.com/tm88493/pika-pesu-modules/code/Loom/Checkout/"
+    }
+  ],
+  "autoload": {
+    "files": [
+      "registration.php"
+    ],
+    "psr-4": {
+      "Loom\\Checkout\\": ""
+    }
+  }
+}

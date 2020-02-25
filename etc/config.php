@@ -221,9 +221,12 @@ return [
         'Klarna_Kp' => 0,
         'Loom_Admin' => 1,
         'Loom_Catalog' => 1,
+        'Loom_Checkout' => 1,
         'Loom_ColorOrderStatus' => 1,
         'Loom_Customer' => 1,
         'Loom_Swatches' => 1,
+        'MGS_Ajaxlayernavigation' => 1,
+        'MGS_Core' => 1,
         'Magento_PaypalReCaptcha' => 1,
         'MSP_TwoFactorAuth' => 1,
         'Magefan_Community' => 1,
@@ -253,7 +256,7 @@ return [
         'Swissup_SubscribeAtCheckout' => 1,
         'Swissup_Taxvat' => 1,
         'Swissup_Tippyjs' => 1,
-        'Temando_Shipping' => 1,
+        'Temando_Shipping' => 0,
         'Ubertheme_Ubdatamigration' => 1,
         'Vertex_Tax' => 1
     ]

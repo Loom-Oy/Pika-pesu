@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<!--
+/*
+ * @package    Loom_Checkout
+ * @copyright  Loom Oy - 2020
+ */
+ -->
+ <config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Event/etc/events.xsd">
+    <event name="payment_method_is_active">
+        <observer name="company_invoice" instance="Loom\Checkout\Observer\CompanyInvoice" />
+    </event>
+</config>
