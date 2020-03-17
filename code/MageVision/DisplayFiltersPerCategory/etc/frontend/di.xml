@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * MageVision Display Filter Per Category Extension
+ *
+ * @category     MageVision
+ * @package      MageVision_DisplayFiltersPerCategory
+ * @author       MageVision Team
+ * @copyright    Copyright (c) 2019 MageVision (http://www.magevision.com)
+ * @license      LICENSE_MV.txt or http://www.magevision.com/license-agreement/
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    <type name="Magento\Catalog\Model\Layer\FilterList">
+        <plugin name="category_selected_filters" type="MageVision\DisplayFiltersPerCategory\Plugin\Magento\Catalog\Model\Layer\GetSelectedFilters"/>
+    </type>
+</config>

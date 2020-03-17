@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * MageVision Display Filter Per Category Extension
+ *
+ * @category     MageVision
+ * @package      MageVision_DisplayFiltersPerCategory
+ * @author       MageVision Team
+ * @copyright    Copyright (c) 2019 MageVision (http://www.magevision.com)
+ * @license      LICENSE_MV.txt or http://www.magevision.com/license-agreement/
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Acl/etc/acl.xsd">
+    <acl>
+        <resources>
+            <resource id="Magento_Backend::admin">
+                <resource id="Magento_Backend::stores">
+                    <resource id="Magento_Backend::stores_settings">
+                        <resource id="Magento_Config::config">
+                            <resource id="MageVision_DisplayFiltersPerCategory::displayfilterspercategory_configuration" title="Display Filters Per Category Section" />
+                        </resource>
+                    </resource>
+                </resource>
+            </resource>
+        </resources>
+    </acl>
+</config>

@@ -1,0 +1,137 @@
+<?php
+/**
+ * MageVision Display Filter Per Category Extension
+ *
+ * @category     MageVision
+ * @package      MageVision_DisplayFiltersPerCategory
+ * @author       MageVision Team
+ * @copyright    Copyright (c) 2019 MageVision (http://www.magevision.com)
+ * @license      LICENSE_MV.txt or http://www.magevision.com/license-agreement/
+ */
+
+$element = $block->getElement();
+?>
+<?php $_htmlId      = $element->getHtmlId() ?>
+<?php $_htmlClass   = $element->getClass() ?>
+<?php $_htmlName    = $element->getName() ?>
+<?php $_readonly    = $element->getReadonly() ?>
+
+<div class="field" id="attribute-<?= $block->escapeHtml($_htmlId) ?>-container" data-attribute-code="<?= $block->escapeHtml($_htmlId) ?>"
+     data-apply-to="<?= $block->escapeHtml(
+         $this->helper(Magento\Framework\Json\Helper\Data::class)->jsonEncode(
+             $element->hasEntityAttribute() ? $element->getEntityAttribute()->getApplyTo() : []
+         )
+     )?>">
+    <div class="control">
+        <table class="admin__control-table filters_table" id="filters_table">
+            <thead>
+            <tr>
+                <th class="col-customer-group"><?= $block->escapeHtml(__('Filter Name')) ?></th>
+                <th class="col-qty required"><?= $block->escapeHtml(__('Position')) ?></th>
+                <th class="col-delete"><?= $block->escapeHtml(__('Action')) ?></th>
+            </tr>
+            </thead>
+            <tbody id="<?= $block->escapeHtml($_htmlId) ?>_container"></tbody>
+            <tfoot>
+            <tr>
+                <td colspan="3" class="col-actions-add"><?= $block->getAddButtonHtml() ?></td>
+            </tr>
+            </tfoot>
+        </table>
+        <script>
+            require([
+                'mage/template',
+                "prototype",
+                "mage/adminhtml/form"
+            ], function (mageTemplate) {
+
+//<![CDATA[
+                var filterRowTemplate = '<tr>'
+                    + '<td class="col-filter"><select class="<?= $block->escapeHtml($_htmlClass) ?> required-entry" data-form-part="category_form" name="<?= $block->escapeHtml($_htmlName) ?>[<%- data.index %>][filter_code]" id="filter_row_<%- data.index %>_filter_code">'
+                    <?php foreach ($block->getFilters() as $filterId => $filterName) : ?>
+                    + '<option value="<?= $block->escapeHtml($filterId) ?>"><?= $block->escapeJs($filterName) ?></option>'
+                    <?php endforeach ?>
+                    + '</select></td>'
+                    + '<td class="col-position"><input class="<?= $block->escapeHtml($_htmlClass) ?> required-entry validate-number" data-form-part="category_form" type="text" name="<?= $block->escapeHtml($_htmlName) ?>[<%- data.index %>][position]" value="<%- data.position %>" id="filter_row_<%- data.index %>_position" /></td>'
+                    + '<td class="col-delete"><input type="hidden" data-form-part="category_form" name="<?= $block->escapeHtml($_htmlName) ?>[<%- data.index %>][delete]" class="delete" value="" id="filter_row_<%- data.index %>_delete" />'
+                    + '<button title="<?= $block->escapeHtml(__('Delete Filter')) ?>" type="button" class="action- scalable delete icon-btn delete-product-option" id="filter_row_<%- data.index %>_delete_button" onclick="return filterControl.deleteItem(event);">'
+                    + '<span><?= $block->escapeHtml(__('Delete')) ?></span></button></td>'
+                    + '</tr>';
+
+                var filterControl = {
+                    template: mageTemplate(filterRowTemplate),
+                    itemsCount: 0,
+                    addItem : function () {
+                        <?php if ($_readonly) : ?>
+                        if (arguments.length < 2) {
+                            return;
+                        }
+                        <?php endif; ?>
+                        var data = {
+                            filter_code: '',
+                            position: '',
+                            readOnly: false,
+                            index: this.itemsCount++
+                        };
+
+                        if(arguments.length >= 2) {
+                            data.filter_code      = arguments[0];
+                            data.position   = arguments[1];
+                        }
+                        if (arguments.length == 3) {
+                            data.readOnly = arguments[2];
+                        }
+
+                        Element.insert($('<?= $block->escapeHtml($_htmlId) ?>_container'), {
+                            bottom : this.template({
+                                data: data
+                            })
+                        });
+
+                        $('filter_row_' + data.index + '_filter_code').value = data.filter_code;
+
+
+                        if (data.readOnly == '1') {
+                            ['filter_code', 'position', 'delete'].each(function(idx){
+                                $('filter_row_'+data.index+'_'+idx).disabled = true;
+                            });
+                            $('filter_row_'+data.index+'_delete_button').hide();
+                        }
+
+                        <?php if ($_readonly) : ?>
+                        $('<?= $block->escapeHtml($_htmlId) ?>_container').select('input', 'select').each(this.disableElement);
+                        $('<?= $block->escapeHtml($_htmlId) ?>_container').up('table').select('button').each(this.disableElement);
+                        <?php else : ?>
+                        $('<?= $block->escapeHtml($_htmlId) ?>_container').select('input', 'select').each(function(el){ Event.observe(el, 'change', el.setHasChanges.bind(el)); });
+                        <?php endif; ?>
+                    },
+                    disableElement: function(el) {
+                        el.disabled = true;
+                        el.addClassName('disabled');
+                    },
+                    deleteItem: function(event) {
+                        var tr = Event.findElement(event, 'tr');
+                        if (tr) {
+                            Element.select(tr, '.delete').each(function(elem){elem.value='1'});
+                            Element.select(tr, ['input', 'select']).each(function(elem){elem.hide()});
+                            Element.hide(tr);
+                            Element.addClassName(tr, 'no-display template');
+                        }
+                        return false;
+                    }
+                };
+                <?php foreach ($block->getValues() as $_item) : ?>
+                filterControl.addItem('<?= $block->escapeHtml($_item['filter_code']) ?>', '<?= $block->escapeHtml($_item['position']) ?>', <?= (int)!empty($_item['readonly']) ?>);
+                <?php endforeach; ?>
+                <?php if ($_readonly) : ?>
+                $('<?= $block->escapeHtml($_htmlId) ?>_container').up('table').select('button')
+                    .each(filterControl.disableElement);
+                <?php endif; ?>
+
+                window.filterControl = filterControl;
+//]]>
+
+            });
+        </script>
+    </div>
+</div>
