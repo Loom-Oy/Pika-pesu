@@ -364,7 +364,7 @@ class Carrier extends AbstractCarrierOnline implements CarrierInterface
         $shipment->addChild('Weight', $request->getPackageWeight());
         $shipment->addChild('Packages', count($request->getPackages()));
         $shipment->addChild('SenderId', $this->getConfigData('userid'));
-        $shipment->addChild('SenderName1', $request->getShipperContactCompanyName());
+        $shipment->addChild('SenderName1', "Seinäjoen Pika-Pesu Oy");
         $shipment->addChild('SenderName2', '');
         $shipment->addChild('SenderAddress', $request->getShipperAddressStreet());
         $shipment->addChild('SenderPostal', $request->getShipperAddressPostalCode());
