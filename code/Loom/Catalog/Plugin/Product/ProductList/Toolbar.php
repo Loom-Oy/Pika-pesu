@@ -1,4 +1,9 @@
 <?php
+/*
+ * @package    Loom_Catalog
+ * @copyright  Loom Oy - 2020
+ */
+
 namespace Loom\Catalog\Plugin\Product\ProductList;
 
 class Toolbar
@@ -20,12 +25,8 @@ class Toolbar
         $currentDirection = $toolbar->getCurrentDirection();
         $result = $proceed($collection);
 
-        
-
         if ($currentOrder) {
-            
             switch ($currentOrder) {
-
                     case 'created':
                         if ($currentDirection == 'desc') {
                             $this->_collection->setOrder('created_at', 'desc');   

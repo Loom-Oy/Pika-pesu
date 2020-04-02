@@ -1,4 +1,9 @@
 <?php
+/*
+ * @package    Loom_Catalog
+ * @copyright  Loom Oy - 2020
+ */
+
 namespace Loom\Catalog\Plugin\Model;
 
 class Config
@@ -17,12 +22,12 @@ class Config
         unset($options['name']);
         unset($options['price']);
         unset($options['size']);
+        unset($options['filter_size']);
 
         //New sorting options
         $options['created'] = __('Created');
         $options['price_new'] = __('Price');
         $options['name_new'] = __('Name');
-
 
         return $options;
     }
