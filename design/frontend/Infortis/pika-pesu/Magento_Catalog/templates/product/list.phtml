@@ -14,8 +14,14 @@ use Magento\Framework\App\Action\Action;
     $collectionSize = $_productCollection->count();
 ?>
 <?php if (!$collectionSize): ?>
-    <div class="message info empty"><div><?php /* @escapeNotVerified */ echo __('We can\'t find products matching the selection.') ?></div></div>
+    <div id="noProductsFoundMessage" class="message info empty"><div><?php /* @escapeNotVerified */ echo __('We can\'t find products matching the selection.') ?></div></div>
 <?php else: ?>
+    <script>
+        var messageElement = document.getElementById("noProductsFoundMessage");
+        if(messageElement){
+            messageElement.remove();
+        }
+    </script>
     <?php
     // Hide toolbar
     $hideToolbar = false;

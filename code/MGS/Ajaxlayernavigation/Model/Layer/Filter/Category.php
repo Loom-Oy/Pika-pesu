@@ -42,13 +42,11 @@ class Category extends \MGS\Ajaxlayernavigation\Model\Layer\Filter\DefaultFilter
         $productCollection = $this->getLayer()->getProductCollection();
 
         if ($request->getParam('id') != $categoryId) {  
-             $this->appliedFilter = $categoryId;
+             $this->appliedFilter = $categoryId; 
             if (!$this->filterPlus) {
                 $this->filterPlus = true;
             }
-            foreach($categoryIds as $catId){
-                $productCollection->addCategoriesFilter(['in' => $catId]); 
-            }
+            $productCollection->addCategoriesFilter(['in' => $categoryIds]);
             $category = $this->getLayer()->getCurrentCategory();
             $child = $category->getCollection()
                 ->addFieldToFilter($category->getIdFieldName(), ['in' => $categoryIds])
