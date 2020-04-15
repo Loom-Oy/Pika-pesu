@@ -463,7 +463,7 @@ class Carrier extends AbstractCarrierOnline implements CarrierInterface
   			),
   			"shipment" => array(
   				"sender" => array(
-  					"name" => $request->getShipperContactCompanyName(),
+  					"name" => "Seinäjoen Pika-Pesu Oy",
   					"address1" => $request->getShipperAddressStreet(),
   					"zipcode" => $request->getShipperAddressPostalCode(),
   					"city" => $request->getShipperAddressCity(),
