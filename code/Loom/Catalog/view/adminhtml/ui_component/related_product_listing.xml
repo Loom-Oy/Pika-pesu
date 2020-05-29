@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+/*
+ * @package    Loom_Catalog
+ * @copyright  Loom Oy - 2020
+ */
+-->
+<listing xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Ui:etc/ui_configuration.xsd"> 
+    <columns name="product_columns"> 
+        <column name="manufacturer" class="Loom\Catalog\Ui\Component\Listing\Columns\ManufacturerText" sortOrder="25">
+            <settings>
+                <options class="Loom\Catalog\Model\Product\Attribute\Source\Manufacturer"/>
+                <addField>true</addField>
+                <filter>select</filter>
+                <dataType>select</dataType>
+                <label translate="true">Manufacturer</label>
+            </settings>
+        </column>
+    </columns> 
+</listing>
